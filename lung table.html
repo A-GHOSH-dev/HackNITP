@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lung Donor Database</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        table {
+          border-collapse: collapse;
+          border-spacing: 0;
+          width: 60%;
+          
+          border: 3px solid rgb(174, 219, 236);
+          margin-left: 21%;
+          margin-top: 140px;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 16px;
+        }
+
+        .hllo{
+            background-color: rgb(207, 233, 236);
+        }
+        
+        .hi{
+            background-color: white;
+        }
+        
+        th{
+            background-color: rgb(104, 219, 235);
+            border: ;
+        }
+
+        h2{
+            margin-top: 100px;
+            margin-bottom: -80px;
+            text-align: center;
+        }
+
+        @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Exo', sans-serif;
+}
+
+body {
+	/*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+    background: linear-gradient(-45deg, #ae76df, #df8ddc, #43a6ca, #5cd443);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 145px;
+  width: 100%;
+  background: #45d4e7;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: rgb(14, 13, 13);
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #070707;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+
+        </style>
+        </head>
+        <body>
+            <section>
+                <nav>
+                    <div class="logo">Donation & Vaccine</div>
+                    <input type="checkbox" id="click">
+                    <label for="click" class="menu-btn">
+                      <i class="fas fa-bars"></i>
+                    </label>
+                    <ul>
+                      <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate2.html">Home</a></li>
+                      <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate2.html">Services Offered</a></li>
+                      <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate1.html">Donate</a></li>
+                      <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate3.html">Need</a></li>
+                      <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Healthinfochatbot.html">Health-info Corner</a></li>
+                      <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/covid vaccine open page.html">COVID-19 Vaccine Registration</a></li>
+                    </ul>
+                  </nav>
+                  
+                    
+                  </div>
+                </section>
+
+
+        <h2>Lung Donors</h2>
+        
+        
+        
+            <table class="centre">
+              <tr>
+                <th>Name</th>
+                <th>Country</th>
+                
+                <th>Contact</th>
+                <th>Email</th>
+                <th>Location</th>
+                <th>Hospital in Affiliation</th>
+              </tr>
+              <tr class="hllo">
+                <td>XYZ</td>
+                <td>India</td>
+                <td>1233****</td>
+                <td>xyz@email.com</td>
+                <td>ABC</td>
+                <td>PQRS hospital</td>
+                
+              </tr>
+              <tr class="hi">
+                <td>Lorem</td>
+                <td>India</td>
+                <td>7346***</td>
+                <td>hjb@email.com</td>
+                <td>hjs</td>
+                <td>Ipsum Hospital</td>
+              </tr>
+              <tr class="hllo">
+                <td>Hii</td>
+                <td>India</td>
+                <td>6554***</td>
+                <td>hty@email.com</td>
+                <td>yhs</td>
+                <td>Ips Hospital</td>
+              </tr>
+              <tr class="hi">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hllo">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>      <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hi">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hllo">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hi">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hllo">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hi">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hllo">
+                <td>Hello</td>      <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hi">
+                <td>Hello</td>
+                <td>USA</td>
+                <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+              <tr class="hllo">
+                <td>Hello</td>
+                <td>USA</td>      <td>5645***</td>
+                <td>hll@email.com</td>
+                <td>ryn</td>
+                <td>Ers Hospital</td>
+              </tr>
+            </table>
+         
+            
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+</body>
+</html>

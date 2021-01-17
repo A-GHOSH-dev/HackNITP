@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Need</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 145px;
+  width: 100%;
+  background: #06a113;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+
+    html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(139, 236, 90) 50%, rgb(113, 188, 238) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+
+
+
+
+.container1 {
+  position: relative;
+  width: 15%;
+  margin-top: 200px;
+  margin-left: 120px;
+}
+
+.image1 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(43, 43, 136);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container1:hover .image1 {
+  opacity: 0.3;
+}
+
+.container1:hover .middle {
+  opacity: 1;
+}
+
+.text1 {
+  background-color: #046ec4;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px 32px;
+}
+
+
+
+
+
+
+.container2 {
+  position: absolute;
+  width: 15%;
+  margin-top: -238px;
+  margin-left: 520px;
+}
+
+.image2 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(4, 99, 4);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container2:hover .image2 {
+  opacity: 0.3;
+}
+
+.container2:hover .middle {
+  opacity: 1;
+}
+
+.text2 {
+  background-color: #14c404;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 16px 32px;
+}
+
+
+
+
+
+
+.container3 {
+  position: absolute;
+  width: 15%;
+  margin-top: -238px;
+  margin-left: 903px;
+}
+
+.image3 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(165, 16, 16);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container3:hover .image3 {
+  opacity: 0.3;
+}
+
+.container3:hover .middle {
+  opacity: 1;
+}
+
+.text3 {
+  background-color: #d62020;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+h1{
+    font-family: 'Fugaz One', cursive;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: -150px;
+    
+    
+    
+    /*background: linear-gradient(#1d58d8, #da1ad0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;*/
+
+}
+
+
+
+
+
+
+.container4 {
+  position: absolute;
+  width: 15%;
+  margin-top: 60px;
+  margin-left: 120px;
+}
+
+.image4 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(206, 202, 2);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container4:hover .image4 {
+  opacity: 0.3;
+}
+
+.container4:hover .middle {
+  opacity: 1;
+}
+
+.text4 {
+  background-color: #7c7e06;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+.container5 {
+  position: absolute;
+  width: 15%;
+  margin-top: 60px;
+  margin-left: 520px;
+}
+
+.image5 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(145, 3, 102);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container5:hover .image5 {
+  opacity: 0.3;
+}
+
+.container5:hover .middle {
+  opacity: 1;
+}
+
+.text5 {
+  background-color: #96057e;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.container6 {
+  position: absolute;
+  width: 15%;
+  margin-top: 60px;
+  margin-left: 903px;
+}
+
+.image6 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(4, 94, 105);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container6:hover .image6 {
+  opacity: 0.3;
+}
+
+.container6:hover .middle {
+  opacity: 1;
+}
+
+.text6 {
+  background-color: #056779;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+.container7 {
+  position: absolute;
+  width: 15%;
+  margin-top: 390px;
+  margin-left: 120px;
+}
+
+.image7 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(31, 5, 146);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container7:hover .image7 {
+  opacity: 0.3;
+}
+
+.container7:hover .middle {
+  opacity: 1;
+}
+
+.text7 {
+  background-color: #271c8f;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.container8 {
+  position: absolute;
+  width: 15%;
+  margin-top: 390px;
+  margin-left: 520px;
+}
+
+.image8 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(223, 93, 7);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container8:hover .image8 {
+  opacity: 0.3;
+}
+
+.container8:hover .middle {
+  opacity: 1;
+}
+
+.text8 {
+  background-color: #c4411a;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+.container9 {
+  position: absolute;
+  width: 15%;
+  margin-top: 390px;
+  margin-left: 903px;
+}
+
+.image9 {
+  opacity: 1;
+  display: block;
+  width: 50px;
+  height: 170px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-color: rgb(74, 4, 121);
+  border-radius: 16px;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container9:hover .image9 {
+  opacity: 0.3;
+}
+
+.container9:hover .middle {
+  opacity: 1;
+}
+
+.text9 {
+  background-color: #4b0579;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.btn{
+    background-color: rgb(7, 7, 7);
+    font-size: 15px;
+    font-weight: bolder;
+    color: rgb(247, 246, 250);
+    border-radius: 20px;
+    width: 130px;
+    height: 50px;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 38px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.btnA1{
+  padding: 15px 25px;
+  margin: 20px 20px 20px 20px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  
+}
+
+.btnA1:hover {background-color: #f7093c}
+
+.btnA1:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+.btnA2{
+  padding: 15px 25px;
+  margin: 20px 20px 20px 20px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  
+}
+
+.btnA2:hover {background-color: #f7093c}
+
+.btnA2:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+
+.btnB1{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.btnB1:hover {background-color: #f7093c}
+
+.btnB1:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+.btnB2{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.btnB2:hover {background-color: #f7093c}
+
+.btnB2:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+.btnAB1{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.btnAB1:hover {background-color: #f7093c}
+
+.btnAB1:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+.btnAB2{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.btnAB2:hover {background-color: #f7093c}
+
+.btnAB2:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+.btnO1{
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.btnO1:hover {background-color: #f7093c}
+
+.btnO1:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+
+.btnO2{
+  position: relative;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(172, 16, 16);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgb(163, 216, 233);
+  margin: 20px 20px 20px 20px;
+  
+}
+
+.btnO2:hover {background-color: #f7093c}
+
+.btnO2:active {
+  background-color: #f0176a;
+  box-shadow: 0 5px rgb(135, 182, 235);
+  transform: translateY(4px);
+}
+
+.choosing{
+  margin-top: 750px;
+  text-align: center;
+
+}
+
+.bloody{
+  margin-left: 110px;
+  margin-top: 200px;
+  margin-right: 110px;
+  position: relative;
+  
+}
+
+#aa{color: white;
+  text-decoration: none;
+}
+#bb{color: white;
+  text-decoration: none;
+}
+#cc{color: white;
+  text-decoration: none;
+}
+#dd{color: white;
+  text-decoration: none;
+}
+#ee{color: white;
+  text-decoration: none;
+}
+#ff{color: white;
+  text-decoration: none;
+}
+#gg{color: white;
+  text-decoration: none;
+}
+#hh{color: white;
+  text-decoration: none;
+}
+#ii{color: white;
+  text-decoration: none;
+}
+#jj{color: white;
+  text-decoration: none;
+}
+#kk{color: white;
+  text-decoration: none;
+}
+#ll{color: white;
+  text-decoration: none;
+}
+#mm{color: white;
+  text-decoration: none;
+}
+#nn{color: white;
+  text-decoration: none;
+}
+#oo{color: white;
+  text-decoration: none;
+}
+#pp{color: white;
+  text-decoration: none;
+}
+#qq{
+  color: white;
+  text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+
+
+  <section>
+    <nav>
+        <div class="logo">Donation & Vaccine</div>
+        <input type="checkbox" id="click">
+        <label for="click" class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <ul>
+          <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate2.html">Home</a></li>
+          <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate2.html">Services Offered</a></li>
+          <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate1.html">Donate</a></li>
+          <li><a class="active" href="#">Need</a></li>
+          <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Healthinfochatbot.html">Health-info Corner</a></li>
+          <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/covid vaccine open page.html">COVID-19 Vaccine Registration</a></li>
+        </ul>
+      </nav>
+      
+        
+      </div>
+    </section>
+<h1>Find an Organ!!</h1>
+<div class="container1">
+  <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/lung.jpg" alt="Lung" class="image1" style="width:100%">
+  <div class="middle">
+    <div class="text1">Lung</div>
+    
+  </div>
+  <button class="btn"><a id="ii" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/lung table.html">Lung</a></button>
+</div>
+
+
+
+<div class="container2">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/heart.jpg" alt="Heart" class="image2" style="width:100%">
+    <div class="middle">
+      <div class="text2">Heart</div>
+    </div>
+    <button class="btn"><a id="jj" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/heart table.html">Heart</a></button>
+  </div>
+
+
+
+
+  <div class="container3">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/liver.jpg" alt="Liver" class="image3" style="width:100%">
+    <div class="middle">
+      <div class="text3">Liver</div>
+    </div>
+    <button class="btn"><a id="kk" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/liver table.html">Liver</a></button>
+  </div>
+
+
+
+
+
+  <div class="container4">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/kidney.jpg" alt="Kidney" class="image4" style="width:100%">
+    <div class="middle">
+      <div class="text4">Kidney</div>
+    </div>
+    <button class="btn"><a id="ll" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/kidney.html">Kidney</a></button>
+  </div>
+
+
+
+
+  <div class="container5">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/pancreas.jpg" alt="Pancreas" class="image5" style="width:100%">
+    <div class="middle">
+      <div class="text5">Pancreas</div>
+    </div>
+    <button class="btn"><a id="mm" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/pancreas table.html">Pancreas</a></button>
+  </div>
+
+
+
+
+  <div class="container6">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/intestine.jpg" alt="Intestine" class="image6" style="width:100%">
+    <div class="middle">
+      <div class="text6">Intestine</div>
+    </div>
+    <button class="btn"><a id="nn" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/intestine table.html">Intestine</a></button>
+  </div>
+
+
+
+
+  <div class="container7">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/cornea.jpg" alt="Cornea/Eye" class="image7" style="width:100%">
+    <div class="middle">
+      <div class="text7">Eye/Cornea</div>
+    </div>
+    <button class="btn"><a id="oo" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/eye table.html">Eye/Cornea</a></button>
+  </div>
+
+
+
+
+  <div class="container8">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/bone.jpg" alt="Bone/Ligament" class="image8" style="width:100%">
+    <div class="middle">
+      <div class="text8">Bone/Ligament</div>
+    </div>
+    <button class="btn"><a id="pp" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/bone table.html">Bone/Ligament</a></button>
+  </div>
+
+
+
+  <div class="container9">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/skin.jpg" alt="Skin" class="image9" style="width:100%">
+    <div class="middle">
+      <div class="text9">Skin</div>
+    </div>
+    <button class="btn"><a id="qq" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/skin table.html">Skin</a></button>
+  </div>
+
+<div class="choosing">
+  <h1>Find the Blood Group you need</h1>
+</div>
+
+  <div class="bloody">
+    <button class="btnA1"><a id="aa" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">A+</a></button>
+    <button class="btnA2"><a id="bb" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">A-</a></button>
+    <button class="btnB1"><a id="cc" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">B+</a></button>
+    <button class="btnB2"><a id="dd" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">B-</a></button>
+    <button class="btnAB1"><a id="ee" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">AB+</a></button>
+    <button class="btnAB2"><a id="ff" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">AB-</a></button>
+    <button class="btnO1"><a id="gg" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">O+</a></button>
+    <button class="btnO2"><a id="hh" href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Blood bank.html">O-</a></button>
+  </div>
+  
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

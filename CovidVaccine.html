@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Vaccine Program Registration (Frontline  Warriors)</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+nav{
+  display: flex;
+  height: 145px;
+  width: 100%;
+  background: #0a6ec0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+    * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #1b6cc9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #1c9fc0;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 100px;
+  padding-left: 600px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.image1{
+    padding-top: 0px;
+}
+
+.imo{
+    width: 500px;
+    height: 700px;
+    position: absolute;
+    margin-top: -770px;
+    margin-left: 40px;
+}
+</style>
+</head>
+<body>
+    <section>
+        <nav>
+            <div class="logo">Donation & Vaccine</div>
+            <input type="checkbox" id="click">
+            <label for="click" class="menu-btn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <ul>
+              <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate2.html">Home</a></li>
+              <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate2.html">Services Offered</a></li>
+              <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate1.html">Donate</a></li>
+              <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Donate3.html">Need</a></li>
+              <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Healthinfochatbot.html">Health-info Corner</a></li>
+              <li><a href="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/covid vaccine open page.html">COVID-19 Vaccine Registration</a></li>
+            </ul>
+          </nav>
+          
+            
+          </div>
+        </section>
+
+
+<div class="container">
+  <form action="/action_page.php">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Con">Contact</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Con" name="contact" placeholder="Ph.no./e-mail/address">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Country</label>
+    </div>
+    <div class="col-75">
+      <select id="country" name="country">
+        <option value="australia">India</option>
+        <option value="canada">-----</option>
+        <option value="usa">------</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Con">Location</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Loc" name="location" placeholder="State/City/Address">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="Occ">Occupation</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="Occ" name="occupation" placeholder="Occupation">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="occp">Occupation Proof</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="occp" name="occproof" placeholder="Occupation Proof">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Other Details</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <input type="submit" value="Submit">
+  </div>
+  </form>
+</div>
+<div class="image1">
+    <img src="C://Users/anany/Desktop/VIT/HACKATHONS/HackNITP 3.0 2020 Jan/Images/covid2.jpg" class="imo" alt="We are proud of You">
+</div>
+
+</body>
+</html>
